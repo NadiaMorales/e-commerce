@@ -263,7 +263,7 @@ filters = {
   function renderFilterResults(filters, products){
 
       // This array contains all the possible filter criteria.
-      var criteria = ['manufacturer','storage','os','camera'],
+      var criteria = ['Maquillaje','Cuidado de la Piel','Cuidado del Cabello','Cuidado del Cuerpo'],
       results = [],
       isFiltered = false;
 
