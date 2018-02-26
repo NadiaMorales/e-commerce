@@ -71,7 +71,18 @@ filters = {
   // These are called on page load
 
   // Get data about our products from products.json.
-  $.getJSON( "https://api.mercadolibre.com/sites/MLC/search?category=MLC1648&official_store_id=all", function( data ) {
+
+  // https://api.mercadolibre.com/categories/MLC1246
+
+  const skincare = "MLC1253";
+  const haircare = "MLC1263";
+  const bodycare = "MLC1260";
+  const makeup  = "MLC1248";
+
+  
+
+
+  $.getJSON( `https://api.mercadolibre.com/sites/MLC/search?category=MLC1248&official_store_id=all`, function( data ) {
 
     // Write the data into our global variable.
     products = data.results;

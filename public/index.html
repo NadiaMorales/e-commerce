@@ -30,10 +30,10 @@
       <div class="nav-content teal-text  text-accent-4">
       <br>
         <ul class="tabs tabs-transparent">
-          <li><a  class="teal-text  text-accent-4" href="#test1">Belleza Facial</a></li>
-          <li><a class="teal-text  text-accent-4 active" href="#test2">Cuidado Personal</a></li>
-          <li class="disabled"><a  class="teal-text text-accent-4  href="#test3">Envio Gratis</a></li>
-          <li><a class="teal-text  text-accent-4" href="#test4">Alimentacion</a></li>
+          <li><a  class="teal-text  text-accent-4" href="#test1" idMercado="MLC1253",">Cuidado de la Piel</a></li>
+          <li><a class="teal-text  text-accent-4 active" href="#test2" idMercado="MLC1263">Cuidado del Cabello</a></li>
+          <li class="disabled"><a  class="teal-text text-accent-4" href="#test3" idMercado="MLC1260">Cuidado del Cuerpo</a></li>
+          <li><a class="teal-text  text-accent-4" href="#test4" idMercado="MLC1248">Maquillaje</a></li>
         </ul>
       </div>
   </nav>
@@ -142,7 +142,7 @@
 $('.producto').click(function(e){
      e.stopPropagation();
    paypal.minicart.cart.add({
-  business: 'visidevi@gmail.com ', // Cuenta paypal para recibir el dinero
+  business: 'visidevi-facilitator@gmail.com ', // Cuenta paypal para recibir el dinero
   item_name: $(this).attr("titulo"),
   amount: $(this).attr("precio"),
    currency_code: 'CLP',
