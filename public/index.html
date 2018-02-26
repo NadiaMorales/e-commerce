@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8">
+  <title>Single Page App Without A Framework</title>
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link href="assets/css/styles.css" rel="stylesheet">
+</head>
+<body>
+  <header class="compact">
+    <h2 class="tzine"><a href="http://tutorialzine.com/2015/02/single-page-app-without-a-framework/">Back to article</a></h2>
+    <h1><a href="#">Single Page App Without A Framework</a></h1>
+  </header>
+  <div class="main-content">
+    <div class="all-products page">
+      <div class="filters">
+        <form>
+          <div class="filter-criteria">
+            <span>Manufacturer</span>
+            <label><input type="checkbox" name="manufacturer" value="apple">Apple</label>
+            <label><input type="checkbox" name="manufacturer" value="samsung">Samsung</label>
+            <label><input type="checkbox" name="manufacturer" value="htc">HTC</label>
+            <label><input type="checkbox" name="manufacturer" value="nokia">Nokia</label>
+            <label><input type="checkbox" name="manufacturer" value="zte">ZTE</label>
+            <label><input type="checkbox" name="manufacturer" value="sony">Sony</label>
+          </div>
+
+          <div class="filter-criteria">
+            <span>Screen Size</span>
+            <label><input type="checkbox" value="16" name="storage">16 GB</label>
+            <label><input type="checkbox" value="32" name="storage">32 GB</label>
+          </div>
+
+          <div class="filter-criteria">
+            <span>OS</span>
+            <label><input type="checkbox" value="android" name="os">Android</label>
+            <label><input type="checkbox" value="ios" name="os">iOS</label>
+            <label><input type="checkbox" value="windows" name="os">Windows</label>
+          </div>
+
+          <div class="filter-criteria">
+            <span>Camera</span>
+            <label><input type="checkbox" value="5" name="camera">5 Mpx</label>
+            <label><input type="checkbox" value="8" name="camera">8 Mpx</label>
+            <label><input type="checkbox" value="12" name="camera">12 Mpx</label>
+            <label><input type="checkbox" value="15" name="camera">15 Mpx</label>
+          </div>
+
+          <button>Clear filters</button>
+        </form>
+      </div>
+      <ul class="products-list">
+        <script id="products-template" type="x-handlebars-template">​
+          {{#each this}}
+          <li data-index="{{id}}">
+            <a href="#" class="product-photo"><img src="{{thumbnail}}" height="130" alt="{{name}}"/></a>
+            <h2><a href="#"> {{name}} </a></h2>
+            <ul class="product-description">
+              <li><span>{{title}}</span></li>
+              <li><span>Lugar: </span>{{address.state_name}}</li>
+              <li><span>Disponibles: </span>{{available_quantity}}</li>
+              <li><span>Estado: </span>{{condition}}</li>
+            </ul>
+            <a class="waves-effect waves-light btn deep-purple darken-4 producto" precio="{{price}}" titulo="{{name}}" ><i class="material-icons right">add_shopping_cart</i>Añadir</a>
+            <p class="product-price">{{price}}$</p>
+            <div class="highlight"></div>
+          </li>
+          {{/each}}
+        </script> 
+      </ul>
+
+    </div>
+    <div class="single-product page">
+      <div class="overlay"></div>
+      <div class="preview-large">
+        <h3>Single product view</h3>
+        <img src=""  />
+        <p></p>
+        <ul>
+        <li><strong>Estado:</strong> <span id="li1"></span></li>
+        <li>Disponibles: <span id="li2"></span></li>
+        <li>Lugar: <span id="li3"></span></li>
+        <li id="li4"> $</li>
+        </ul>
+        <a class="waves-effect waves-light btn deep-purple darken-4 producto"><i class="material-icons right">add_shopping_cart</i>Añadir</a>
+        <span class="close">×</span>
+      </div>
+    </div>
+    <div class="error page">
+      <h3>Sorry, something went wrong</h3>
+    </div>
+  </div>
+
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js"></script>
+<!--   <script src="https://secure.mlstatic.com/sdk/javascript/v1/mercadopago.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<script src="assets/js/minicart.js"></script>
+<script>
+      // configuración inicial del carrito 
+    paypal.minicart.render({
+    strings:{
+      button:'Pagar'
+     ,buttonAlt: "Total"
+     ,subtotal: 'Total:'
+     ,empty: 'No hay productos en el carrito'
+    }
+    });
+    // Eventos para agregar productos al carrito
+$('.producto').click(function(e){
+     e.stopPropagation();
+  paypal.minicart.view.show();
+   paypal.minicart.cart.add({
+  business: 'visidevi-facilitator@gmail.com', // Cuenta paypal para recibir el dinero
+  item_name: $(this).attr("titulo"),
+  amount: $(this).attr("precio"),
+   currency_code: 'USD',
+// "business": "visidevi@gmail.com", "item_name": $(this).attr("titulo"), "amount": $(this).attr("precio"), "currency_code": "USD"
+ });
+ });
+
+</script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
