@@ -11,46 +11,9 @@ h1, h3{
 	font: normal 24px 'Open Sans', Arial, Helvetica, sans-serif;
 }
 
-/*-----------------
-	The Header
-------------------*/
-
-header {
-	position: fixed;
-	top: 0;
-	left:0;
-	right:0;
-
-	height: 40px;
-	z-index: 100;
-
-	background-color: #282b2c;
-	padding: 20px 40px;
-	color: #fff;
-	box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.1);
-}
-
-header a {
-	color: #ffffff;
-	text-decoration: none;
-}
-
-header h2.tzine{
-	float: right;
-	opacity:0.9;
-}
-
-header h2.tzine:hover{
-	opacity:1;
-}
-
-header h2.tzine a{
-	font-size: 13px;
-	text-transform: uppercase;
-	display: inline-block;
-	padding: 12px 18px;
-	border-radius: 3px;
-	background-color: #5895DB;
+.brand-logo small{
+	
+	font-size: .4em;
 }
 
 
@@ -324,6 +287,7 @@ header h2.tzine a{
 
 .single-product{
 	z-index: 1;
+
 }
 
 .overlay{
@@ -344,18 +308,16 @@ header h2.tzine a{
 .preview-large{
 	box-sizing: border-box;
 	width: 760px;
-	height: 550px;
+	height: 250px;
 	position: fixed;
 	left: 50%;
 	margin-left: -375px;
-	top: 50%;
+	top: 60%;
 	margin-top: -275px;
 	pointer-events: none;
-
 	border-radius: 6px;
 	background-color:  #ffffff;
-
-	z-index: 102;
+	z-index: 12;
 	opacity: 0;
 	transition: 0.4s;
 
