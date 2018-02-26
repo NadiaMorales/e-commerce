@@ -1,0 +1,41 @@
+[debug] [2018-02-26T11:07:47.955Z] ----------------------------------------------------------------------
+[debug] [2018-02-26T11:07:47.957Z] Command:       /usr/bin/nodejs /usr/bin/firebase serve
+[debug] [2018-02-26T11:07:47.958Z] CLI Version:   3.17.4
+[debug] [2018-02-26T11:07:47.958Z] Platform:      linux
+[debug] [2018-02-26T11:07:47.958Z] Node Version:  v7.10.1
+[debug] [2018-02-26T11:07:47.958Z] Time:          Mon Feb 26 2018 08:07:47 GMT-0300 (CLST)
+[debug] [2018-02-26T11:07:47.958Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-02-26T11:07:47.969Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-02-26T11:07:47.969Z] > authorizing via signed-in user
+[debug] [2018-02-26T11:07:47.971Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-02-26T11:07:47.972Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/PlDCZ_LKeJqsNsB5B5lOrW99l7HoCrN73naKn59fncw',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Mon Feb 26 2018 08:07:47 GMT-0300 (CLST)
+[debug] [2018-02-26T11:07:48.804Z] <<< HTTP RESPONSE 200
+[debug] [2018-02-26T11:07:48.810Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/reactapp-visidevi  
+  
+ Mon Feb 26 2018 08:07:48 GMT-0300 (CLST)
+[debug] [2018-02-26T11:07:50.139Z] <<< HTTP RESPONSE 200
+[debug] [2018-02-26T11:07:50.141Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/reactapp-visidevi/tokens  
+  
+ Mon Feb 26 2018 08:07:50 GMT-0300 (CLST)
+[debug] [2018-02-26T11:07:51.422Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/home/laboratoria/Desktop/2018/producto final  Sprint6/e-commerce'...
+[info] 
+[debug] [2018-02-26T11:07:51.425Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/reactapp-visidevi  
+  
+ Mon Feb 26 2018 08:07:51 GMT-0300 (CLST)
+[debug] [2018-02-26T11:07:52.642Z] <<< HTTP RESPONSE 200
+[debug] [2018-02-26T11:07:52.642Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/142129790875/clients/_:getWebAppConfig  
+  
+ Mon Feb 26 2018 08:07:52 GMT-0300 (CLST)
+[debug] [2018-02-26T11:07:53.919Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000
+
