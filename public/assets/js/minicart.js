@@ -2108,13 +2108,13 @@ var defaults = module.exports = {
     height: 33px;
     margin-right: 6px;
     padding: 0 9px;
-    border: 1px solid #311b92;
+    border: 1px solid #00bfa5;
     border-radius: 5px;
     color: white;
     text-shadow: 1px 1px 1px #4527a0;
     cursor: pointer;
 
-    background: #311b92;
+    background: #00bfa5;
 
 }
 
@@ -2122,15 +2122,6 @@ var defaults = module.exports = {
     vertical-align: middle;
     padding: 4px 0 0 2px;
 }
-
-
-
-
-
-
-
-
-
 
      `,
 
@@ -2228,9 +2219,6 @@ minicart.reset = function () {
     viewModel.hide();
     viewModel.redraw();
 };
-
-
-
 
 // Export to either node or the brower window
 if (typeof window === 'undefined') {

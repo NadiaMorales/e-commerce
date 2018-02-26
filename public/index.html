@@ -5,15 +5,44 @@
   <meta charset="utf-8">
   <title>Single Page App Without A Framework</title>
   <link href="http://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
   <link href="assets/css/styles.css" rel="stylesheet">
 </head>
-<body>
-  <header class="compact">
-    <h2 class="tzine"><a href="http://tutorialzine.com/2015/02/single-page-app-without-a-framework/">Back to article</a></h2>
-    <h1><a href="#">Single Page App Without A Framework</a></h1>
-  </header>
+<body class=" grey lighten-5">
+<div class="navbar-fixed">
+  
+  <nav class="nav-extended white teal-text  text-accent-4 ">
+      <div class="nav-wrapper teal-text  text-accent-4 ">
+       <a href="#!" class="brand-logo teal-text  text-accent-4"><i class="fab fa-studiovinari fa-2x teal-text  text-accent-3"></i>Helado <small class="teal-text text-darken-4">An e-commerce Proyect</small></a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons teal-text  text-accent-4">menu</i></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down teal-text  text-accent-4">
+          <li><a href="#" class="teal-text  text-accent-4" >Categorias</a></li>
+          <li><a href="#" class="teal-text  text-accent-4" >Login whit Facebook</a></li>
+        </ul>
+        <ul class="side-nav teal-text  text-accent-4" id="mobile-demo">
+          <li ><a href="#" class="teal-text  text-accent-4">Sass</a></li>
+          <li><a href="#">Components</a></li>
+          <li><a href="#" class="teal-text  text-accent-4">JavaScript</a></li>
+        </ul>
+      </div>
+      <div class="nav-content teal-text  text-accent-4">
+      <br>
+        <ul class="tabs tabs-transparent">
+          <li><a  class="teal-text  text-accent-4" href="#test1">Belleza Facial</a></li>
+          <li><a class="teal-text  text-accent-4 active" href="#test2">Cuidado Personal</a></li>
+          <li class="disabled"><a  class="teal-text text-accent-4  href="#test3">Envio Gratis</a></li>
+          <li><a class="teal-text  text-accent-4" href="#test4">Alimentacion</a></li>
+        </ul>
+      </div>
+  </nav>
+</div>
+<!--   <div id="test1" class="col s12">Test 1</div>
+  <div id="test2" class="col s12">Test 2</div>
+  <div id="test3" class="col s12">Test 3</div>
+  <div id="test4" class="col s12">Test 4</div> -->
+
   <div class="main-content">
     <div class="all-products page">
       <div class="filters">
@@ -64,8 +93,8 @@
               <li><span>Disponibles: </span>{{available_quantity}}</li>
               <li><span>Estado: </span>{{condition}}</li>
             </ul>
-            <a class="waves-effect waves-light btn deep-purple darken-4 producto" precio="{{price}}" titulo="{{name}}" ><i class="material-icons right">add_shopping_cart</i>Añadir</a>
-            <p class="product-price">{{price}}$</p>
+            <a class="waves-effect waves-light btn teal accent-4 deep-purple darken-4 producto" precio="{{price}}" titulo="{{name}}" ><i class="material-icons right">add_shopping_cart</i>Añadir</a>
+            <p class="product-price">${{price}}</p>
             <div class="highlight"></div>
           </li>
           {{/each}}
@@ -74,18 +103,17 @@
 
     </div>
     <div class="single-product page">
-      <div class="overlay"></div>
+  <!--     <div class="overlay"></div> -->
       <div class="preview-large">
         <h3>Single product view</h3>
         <img src=""  />
-        <p></p>
         <ul>
         <li><strong>Estado:</strong> <span id="li1"></span></li>
         <li>Disponibles: <span id="li2"></span></li>
         <li>Lugar: <span id="li3"></span></li>
         <li id="li4"> $</li>
         </ul>
-        <a class="waves-effect waves-light btn deep-purple darken-4 producto"><i class="material-icons right">add_shopping_cart</i>Añadir</a>
+        <a class="waves-effect waves-light btn teal accent-4 producto"><i class="material-icons right">add_shopping_cart</i>Añadir</a>
         <span class="close">×</span>
       </div>
     </div>
@@ -113,17 +141,17 @@
     // Eventos para agregar productos al carrito
 $('.producto').click(function(e){
      e.stopPropagation();
-  paypal.minicart.view.show();
    paypal.minicart.cart.add({
-  business: 'visidevi-facilitator@gmail.com', // Cuenta paypal para recibir el dinero
+  business: 'visidevi@gmail.com ', // Cuenta paypal para recibir el dinero
   item_name: $(this).attr("titulo"),
   amount: $(this).attr("precio"),
-   currency_code: 'USD',
+   currency_code: 'CLP',
 // "business": "visidevi@gmail.com", "item_name": $(this).attr("titulo"), "amount": $(this).attr("precio"), "currency_code": "USD"
  });
  });
 
 </script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
   <script src="assets/js/app.js"></script>
   <script src="assets/js/script.js"></script>
 </body>
