@@ -72,10 +72,11 @@ filters = {
   // These are called on page load
 
   // Get data about our products from products.json.
-  $.getJSON( "products.json", function( data ) {
+  $.getJSON( "https://api.mercadolibre.com/sites/MLC/search?category=MLC1648&official_store_id=all", function( data ) {
 
     // Write the data into our global variable.
-    products = data;
+    products = data.results;
+    console.log(products)
 
     // Call a function to create HTML for all the products.
     generateAllProductsHTML(products);
@@ -115,11 +116,12 @@ filters = {
         renderProductsPage(products);
       },
 
-      // Single Products page.
+      // Modal del producto
       '#product': function() {
 
         // Get the index of which product we want to show and call the appropriate function.
         var index = url.split('#product/')[1].trim();
+        console.log(index)
 
         renderSingleProductPage(index, products);
       },
@@ -223,9 +225,14 @@ filters = {
       data.forEach(function (item) {
         if(item.id == index){
           // Populate '.preview-large' with the chosen product's data.
-          container.find('h3').text(item.name);
-          container.find('img').attr('src', item.image.large);
-          container.find('p').text(item.description);
+          container.find('h3').text(item.title);
+          container.find('img').attr('src', item.thumbnail);
+           container.find('p').text(item.title);
+          container.find('#li1').text(item.condition);
+          container.find('#li2').text(item.available_quantity);
+          container.find('#li3').text(item.address.state_name);
+          container.find('#li4').text(`${item.price}$`);
+ 
         }
       });
     }
@@ -331,3 +338,4 @@ filters = {
   }
 
 });
+

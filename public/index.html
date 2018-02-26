@@ -5,6 +5,8 @@
   <meta charset="utf-8">
   <title>Single Page App Without A Framework</title>
   <link href="http://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
   <link href="assets/css/styles.css" rel="stylesheet">
 </head>
 <body>
@@ -50,20 +52,19 @@
           <button>Clear filters</button>
         </form>
       </div>
-
       <ul class="products-list">
         <script id="products-template" type="x-handlebars-template">​
           {{#each this}}
           <li data-index="{{id}}">
-            <a href="#" class="product-photo"><img src="{{image.small}}" height="130" alt="{{name}}"/></a>
+            <a href="#" class="product-photo"><img src="{{thumbnail}}" height="130" alt="{{name}}"/></a>
             <h2><a href="#"> {{name}} </a></h2>
             <ul class="product-description">
-              <li><span>Manufacturer: </span>{{specs.manufacturer}}</li>
-              <li><span>Storage: </span>{{specs.storage}} GB</li>
-              <li><span>OS: </span>{{specs.os}}</li>
-              <li><span>Camera: </span>{{specs.camera}} Mpx</li>
+              <li><span>{{title}}</span></li>
+              <li><span>Lugar: </span>{{address.state_name}}</li>
+              <li><span>Disponibles: </span>{{available_quantity}}</li>
+              <li><span>Estado: </span>{{condition}}</li>
             </ul>
-            <button>Buy Now!</button>
+            <a class="waves-effect waves-light btn deep-purple darken-4"><i class="material-icons right">add_shopping_cart</i>Añadir</a>
             <p class="product-price">{{price}}$</p>
             <div class="highlight"></div>
           </li>
@@ -76,8 +77,16 @@
       <div class="overlay"></div>
       <div class="preview-large">
         <h3>Single product view</h3>
-        <img src=""/>
+        <img src=""  />
         <p></p>
+        <ul>
+        <li><strong>Estado:</strong> <span id="li1"></span></li>
+        <li>Disponibles: <span id="li2"></span></li>
+        <li>Lugar: <span id="li3"></span></li>
+        <li id="li4"> $</li>
+        </ul>
+        <a class="waves-effect waves-light btn deep-purple darken-4"><i class="material-icons right">add_shopping_cart</i>Añadir</a>
+       
         <span class="close">×</span>
       </div>
     </div>
@@ -89,6 +98,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js"></script>
   <script src="https://secure.mlstatic.com/sdk/javascript/v1/mercadopago.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
   <script src="assets/js/script.js"></script>
 </body>
 </html>
