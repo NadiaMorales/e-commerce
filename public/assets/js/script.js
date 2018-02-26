@@ -60,14 +60,13 @@ filters = {
     if (singleProductPage.hasClass('visible')) {
       // captura el elemento que tiene el evento, puede ser el span close o el div overlay
       var clicked = $(e.target);
-      console.log(clicked)
+       // console.log(clicked)
       // si el elemento que tuvo el evento tiene la clase close o la clase overlay se cierra la ventana y el hash (#) de la url se limpia y queda con el valor anterior al hacer click en el producto (filtros o nada)
       if (clicked.hasClass('close') || clicked.hasClass('overlay')) {
         createQueryHash(filters);
       }
     }
   });
-
 
   // These are called on page load
 
@@ -231,7 +230,12 @@ filters = {
           container.find('#li1').text(item.condition);
           container.find('#li2').text(item.available_quantity);
           container.find('#li3').text(item.address.state_name);
-          container.find('#li4').text(`${item.price}$`);
+          container.find('#li4').text(`${item.price}$`); 
+          container.find('a').attr('precio', item.price);
+          container.find('a').attr('titulo', item.title);
+          // class="waves-effect waves-light btn deep-purple darken-4 producto"
+          //  precio="${item.price}" titulo="${item.price}" ><i class="material-icons right">add_shopping_cart</i>Añadir`);
+ 
  
         }
       });
@@ -337,5 +341,5 @@ filters = {
 
   }
 
-});
 
+});

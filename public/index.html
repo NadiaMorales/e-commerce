@@ -64,7 +64,7 @@
               <li><span>Disponibles: </span>{{available_quantity}}</li>
               <li><span>Estado: </span>{{condition}}</li>
             </ul>
-            <a class="waves-effect waves-light btn deep-purple darken-4"><i class="material-icons right">add_shopping_cart</i>Añadir</a>
+            <a class="waves-effect waves-light btn deep-purple darken-4 producto" precio="{{price}}" titulo="{{name}}" ><i class="material-icons right">add_shopping_cart</i>Añadir</a>
             <p class="product-price">{{price}}$</p>
             <div class="highlight"></div>
           </li>
@@ -85,20 +85,46 @@
         <li>Lugar: <span id="li3"></span></li>
         <li id="li4"> $</li>
         </ul>
-        <a class="waves-effect waves-light btn deep-purple darken-4"><i class="material-icons right">add_shopping_cart</i>Añadir</a>
-       
+        <a class="waves-effect waves-light btn deep-purple darken-4 producto"><i class="material-icons right">add_shopping_cart</i>Añadir</a>
         <span class="close">×</span>
       </div>
     </div>
     <div class="error page">
-      <h3>Sorry, something went wrong :(</h3>
+      <h3>Sorry, something went wrong</h3>
     </div>
   </div>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js"></script>
-  <script src="https://secure.mlstatic.com/sdk/javascript/v1/mercadopago.js"></script>
+<!--   <script src="https://secure.mlstatic.com/sdk/javascript/v1/mercadopago.js"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<script src="assets/js/minicart.js"></script>
+<script>
+      // configuración inicial del carrito 
+    paypal.minicart.render({
+    strings:{
+      button:'Pagar'
+     ,buttonAlt: "Total"
+     ,subtotal: 'Total:'
+     ,empty: 'No hay productos en el carrito'
+    }
+    });
+    // Eventos para agregar productos al carrito
+$('.producto').click(function(e){
+     e.stopPropagation();
+  paypal.minicart.view.show();
+   paypal.minicart.cart.add({
+  business: 'visidevi-facilitator@gmail.com', // Cuenta paypal para recibir el dinero
+  item_name: $(this).attr("titulo"),
+  amount: $(this).attr("precio"),
+   currency_code: 'USD',
+// "business": "visidevi@gmail.com", "item_name": $(this).attr("titulo"), "amount": $(this).attr("precio"), "currency_code": "USD"
+ });
+ });
+
+</script>
+  <script src="assets/js/app.js"></script>
   <script src="assets/js/script.js"></script>
 </body>
 </html>
