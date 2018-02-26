@@ -1,0 +1,200 @@
+[
+    {
+        "id": 1,
+        "name": "Samsung Galaxy S8+",
+        "price": 769.990,
+        "specs": {
+            "manufacturer": "Samsung",
+            "storage": 64,
+            "os": "Android",
+            "camera": 12
+        },
+        "description": "El Samsung Galaxy S8+ es la versión de pantalla más grande del Galaxy S8, con una pantalla Infinity Super AMOLED dual-edge de 6.2 pulgadas y resolución QHD+, procesador Snapdragon 835 o Exynos 8895, 4GB de RAM, 64GB de almacenamiento interno, resistencia al agua IP68, carga inalámbrica, cámara Dual Pixel de 12 megapixels, cámara frontal de 8 megapixels con autofocus, lector de huellas dactilares, lector de iris, batería de 3500 mAh con soporte para carga inalámbrica, asistente inteligente Bixby y Android 7.0 Nougat.",
+        "image": {
+            "small": "img/GalaxyS8Plus.png",
+            "large": "img/GalaxyS8PlusS.jpg"
+        }
+    },
+    {
+        "id": 2,
+        "name": "Samsung Galaxy J2 Prime",
+        "price": 69.990,
+        "specs": {
+            "manufacturer": "Samsung",
+            "storage": 8,
+            "os": "Android",
+            "camera": 8
+        },
+        "description": "El Samsung Galaxy J2 Prime es un nuevo integrante de la serie Galaxy J. Entre sus características podemos nombrar una pantalla qHD de 5 pulgadas, procesador MediaTek quad-core a 1.4GHz, 1.5GB de RAM, 8GB de almacenamiento interno, cámara principal de 8 megapixels, cámara frontal de 5 megapixels con flash LED, radio FM, batería de 2600 mAh y corre Android 6.0 Marshmallow.",
+        "image": {
+            "small": "img/samsung-galaxy-j2.jpeg",
+            "large": "img/samsung-galaxy-j2S.jpeg"
+        }
+    },
+    {
+        "id": 3,
+        "name": "Huawei P Smart",
+        "price": 219.990,
+        "specs": {
+            "manufacturer": "Huawei",
+            "storage": 64,
+            "os": "Android",
+            "camera": 13
+        },
+        "description": "El Huawei P Smart es un smartphone Android con una pantalla de 5.65 pulgadas a 1080 x 2160 pixels de resolución, procesador Kirin 659, versiones de 3GB de RAM y 32GB de almacenamiento o 4GB de RAM y 64GB de almacenamiento, cámara dual de 13 MP + 2 MP, lector de huellas, batería de 3000 mAh y Android 8.0 Oreo.",
+        "image": {
+            "small": "img/huaweipsmart.jpg",
+            "large": "img/huaweipsmartS.jpg"
+        }
+    },
+    {
+        "id": 4,
+        "name": "Huawei Eco",
+        "price": 67.990,
+        "specs": {
+            "manufacturer": "Huawei",
+            "storage": 8,
+            "os": "Android",
+            "camera": 5
+        },
+        "description": "El Huawei Eco es una variante del Huawei Y3 II con conectividad LTE. Entre sus características principales se destacan una pantalla FWVGA de 4.5 pulgadas, procesador quad-core, 1GB de RAM, 8GB de almacenamiento, cámaras de 5 MP y 2 MP, batería de 2100 mAh y corre Android 5.1 Lollipop con la interfaz EMUI.",
+        "image": {
+            "small": "img/HuaweiEco.jpg",
+            "large": "img/HuaweiEcoS.jpg"
+        }
+    },
+    {
+        "id": 5,
+        "name": "Apple iPhone X",
+        "price": 929.990,
+        "specs": {
+            "manufacturer": "Apple",
+            "storage": 64,
+            "os": "iOS 11",
+            "camera": 12
+        },
+        "description": "El Apple iPhone X es una demostración de fuerza de Apple, mostrando lo que es capaz de hacer y para celebrar los 10 años del iPhone. El iPhone X cuenta con una pantalla de 5.8 pulgadas que abarca todo el frente del teléfono, dejando un espacio arriba para acomodar todos los sensores que contribuyen a Face ID, el nuevo método de desbloqueo por rostro, ya que el botón Touch ID desaparece. Con una atípica resolución de 2436 x 1125 pixels, acomoda 458ppi. Por dentro, el iPhone X tiene el nuevo procesador A11 Bionic. La cámara es dual de 12 MP similar a la del iPhone 8, es resistente al agua y corre iOS 11.",
+        "image": {
+            "small": "img/AppleiPhoneX.jpg",
+            "large": "img/AppleiPhoneXS.jpg"
+        }
+    },
+    {
+        "id": 6,
+        "name": "Apple iPhone 6S",
+        "price": 549.990,
+        "specs": {
+            "manufacturer": "Apple",
+            "storage": 64,
+            "os": "iOS 9",
+            "camera": 12
+        },
+        "description": "El Apple iPhone 6S es la nueva generación del iPhone 6, incorporando cambios tanto estéticos como de hardware. El iPhone 6S conserva la pantalla de 4.7 pulgadas con resolución Retina, pero incorpora un nuevo procesador A9, una cámara iSight de 12 megapixels, una cámara frontal de 5 megapixels con un flash Retina, y tecnología 3D Touch, que permite reconocer la presión ejercida sobre la pantalla para una nueva forma de interactuar con los paneles táctiles.",
+        "image": {
+            "small": "img/AppleiPhone6S.jpg",
+            "large": "img/AppleiPhone6SS.jpg"
+        }
+    },
+    {
+        "id": 7,
+        "name": "Notebook HP CC506",
+        "price": 849.990,
+        "specs": {
+            "manufacturer": "HP",
+            "storage": "1TB unidad de disco duro + SSD de 128GB",
+            "os": "Windows 10 Home",
+            "Procesador": "Intel Core i7-7500U de 7a generación",
+            "Pantalla": "15,6"
+        },
+        "description": "Prepárate para tener el balance perfecto entre estilo y poder. Con la nueva HP Pavilion Laptop tienes un diseño con detalles metálicos y el mejor desempeño para crear y compartir todo lo que quieras.",
+        "image": {
+            "small": "img/NotebookHPCC506.jpg",
+            "large": "img/NotebookHPCC506s.jpg"
+        }
+    },
+        {
+        "id": 8,
+        "name": "Notebook HP BS003",
+        "price": 189.990,
+        "specs": {
+            "manufacturer": "HP",
+            "storage": "Unidad de disco duro de 500GB 5400 RPM Serial ATA",
+            "os": "Windows 10 Home",
+            "Procesador": "Intel® Celeron® N3060",
+            "Pantalla": "14,0"
+        },
+        "description": "Dale más poder a tus días con una laptop atractiva, creada para mantenerte conectado y con todas las tareas bajo control, con desempeño confiable y batería duradera. Rediseñado por dentro y por fuera: Diseño atractivo y moderno hecho especialmente para ti. La laptop que va contigo: El desempeño que necesitas para trabajar y jugar con hasta 7 horas y 30 minutos de batería. Calidad confiable: Disfruta del sobresaliente desempeño respaldado por más de 200 pruebas.",
+        "image": {
+            "small": "img/NotebookHPBS003.jpg",
+            "large": "img/NotebookHPBS003S.jpg"
+        }
+    },
+        {
+        "id": 9,
+        "name": "Notebook Asus G552VW-CN452T",
+        "price": 949.990,
+        "specs": {
+            "manufacturer": "Asus",
+            "storage": "1TB 7200 RPM - SSD 128GB",
+            "os": "Windows 10",
+            "Procesador": "Intel® Core™ i7-6700HQ Processor 2.6 GHz",
+            "Pantalla": "15.6"
+        },
+        "description": "Siéntate cómodo en tu cabina de control y comienza a disfrutar todo el realismo que ofrece este notebook Asus de 15,6”, especialmente creado para gamers. La acción no se detendrá jamás gracias a su potente procesador Intel Core i7 de cuatro núcleos y una memoria RAM de 16GB.",
+        "image": {
+            "small": "img/NotebookAsusG552VW.jpg",
+            "large": "img/NotebookAsusG552VWS.jpg"
+        }
+    },
+        {
+        "id": 10,
+        "name": "Notebook Asus GA034T",
+        "price": 179.990,
+        "specs": {
+            "manufacturer": "Asus",
+            "storage": "SATA 500GB",
+            "os": "Windows 10",
+            "Procesador": "Intel Dual-Core Celeron N3350 (2M Cache, up to 2.4 GHz)",
+            "Pantalla": "14.0"
+        },
+        "description": "Elegantemente diseñado, el ASUS VIVOBOOK E402NA de 14 pulgadas es totalmente compacto y ligero. Está equipado con puertos tradicionales USB 3.0 y USB 2.0 para garantizar la compatibilidad con todos los dispositivos USB, incluyendo a la vez un USB 3.1 Tipo-C de última generación, HDMI, un lector Smart card reader y puerto RJ-45 Ethernet.",
+        "image": {
+            "small": "img/",
+            "large": "img/"
+        }
+    },
+        {
+        "id": 11,
+        "name": "Notebook Lenovo Ideapad Y910 17",
+        "price": "1.999.990",
+        "specs": {
+            "manufacturer": "Lenovo",
+            "storage": "1 TB",
+            "os": "Windows 10",
+            "Procesador": "Intel Core i7 de sexta generación Quad Core (2.70Ghz - 3.60GHz)",
+            "Pantalla": "17"
+        },
+        "description": "Legion Y910 cuenta con un teclado mecánico RGB personalizable, Gráficos independientes NVIDEA GEFORCE GTX 1070, pantalla Full HD con tecnología IPS y una potencia más inteligente gracias a su Killer Double Shot Pro que permite que Ethernet y WiFi trabajen en conjunto.",
+        "image": {
+            "small": "img/NotebookLenovoIdeapad.jpg",
+            "large": "img/NotebookLenovoIdeapadS.jpg"
+        }
+    },
+        {
+        "id": 12,
+        "name": "Notebook Lenovo Ideapad V110-14IAP",
+        "price": 139.990,
+        "specs": {
+            "manufacturer": "Lenovo",
+            "storage": "500G 7MM 5400RPM",
+            "os": "Ubuntu Versión 17.04",
+            "Procesador": "N3350",
+            "Pantalla": "14.0"
+        },
+        "description": "Desde la memoria y el procesamiento más avanzados hasta un teclado que mejora el rendimiento, la confiable Lenovo V110 puede satisfacer tus necesidades comerciales en el presente y en el futuro. Con un precio accesible, esta laptop liviana tiene un moderno diseño y pantalla antirreflejo que funciona muy bien en interiores y exteriores.",
+        "image": {
+            "small": "img/NotebookLenovoIdeapadV110.jpg",
+            "large": "img/NotebookLenovoIdeapadV110S.jpg"
+        }
+    }
+]
