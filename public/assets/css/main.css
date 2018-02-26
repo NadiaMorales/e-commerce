@@ -1,0 +1,11 @@
+.card .card-image img {
+    display: block;
+    border-radius: 2px 2px 0 0;
+    position: relative;
+    left: 70px;
+    right: 20px;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    box-shadow: 0 0 20px 8px #f3f3f3 inset !important;
+}

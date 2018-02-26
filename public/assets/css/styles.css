@@ -287,7 +287,6 @@ h1, h3{
 
 .single-product{
 	z-index: 1;
-
 }
 
 .overlay{
@@ -307,17 +306,19 @@ h1, h3{
 
 .preview-large{
 	box-sizing: border-box;
-	width: 760px;
-	height: 250px;
+	width: 660px;
+	height: 450px;
 	position: fixed;
 	left: 50%;
 	margin-left: -375px;
-	top: 60%;
+	top: 70%;
 	margin-top: -275px;
 	pointer-events: none;
+
 	border-radius: 6px;
 	background-color:  #ffffff;
-	z-index: 12;
+
+	z-index: 102;
 	opacity: 0;
 	transition: 0.4s;
 
@@ -331,6 +332,7 @@ h1, h3{
 
 .preview-large h3{
 	margin-top: 20px;
+	font-size: 1em;
 }
 
 .preview-large img{

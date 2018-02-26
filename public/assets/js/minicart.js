@@ -2111,7 +2111,7 @@ var defaults = module.exports = {
     border: 1px solid #00bfa5;
     border-radius: 5px;
     color: white;
-    text-shadow: 1px 1px 1px #4527a0;
+    text-shadow: .1px .1px .1px #e0f2f1;
     cursor: pointer;
 
     background: #00bfa5;
