@@ -1903,7 +1903,7 @@ var defaults = module.exports = {
 
     parent: (typeof document !== 'undefined') ? document.body : null,
 
-    action: 'https://www.paypal.com/cgi-bin/webscr',
+    action: 'https://www.sandbox.paypal.com/cgi-bin/webscr',
 
     target: '',
 
