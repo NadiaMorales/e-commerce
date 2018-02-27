@@ -25,10 +25,8 @@
         </a>
         <ul id="nav-mobile" class="right hide-on-med-and-down teal-text  text-accent-4">
           <li>
-            <a href="#" class="teal-text  text-accent-4">Categorias</a>
-          </li>
-          <li>
-            <a href="#" class="teal-text  text-accent-4">Login whit Facebook</a>
+            <a class="waves-effect waves-light btn teal accent-4 producto">
+              <i class="material-icons right">add_shopping_cart</i>Carrito de compras</a>
           </li>
         </ul>
         <ul class="side-nav teal-text  text-accent-4" id="mobile-demo">
@@ -47,16 +45,16 @@
         <br>
         <ul class="tabs tabs-transparent">
           <li>
-            <a class="teal-text  text-accent-4" href="#test1" idMercado="MLC1253">Cuidado de la Piel</a>
+            <a class="teal-text  text-accent-4" href="#Cuidado de la Piel" id="MLC1253">Cuidado de la Piel</a>
           </li>
           <li>
-            <a class="teal-text  text-accent-4 active" href="#test2" idMercado="MLC1263">Cuidado del Cabello</a>
+            <a class="teal-text  text-accent-4 active" href="#Cuidado del Cabello" id="MLC1263">Cuidado del Cabello</a>
           </li>
           <li class="disabled">
-            <a class="teal-text text-accent-4" href="#test3" idMercado="MLC1260">Cuidado del Cuerpo</a>
+            <a class="teal-text text-accent-4" href="#Cuidado del Cuerpo" id="MLC1260">Cuidado del Cuerpo</a>
           </li>
           <li>
-            <a class="teal-text  text-accent-4" href="#test4" idMercado="MLC1248">Maquillaje</a>
+            <a class="teal-text  text-accent-4" href="#Maquillaje" id="MLC1248">Maquillaje</a>
           </li>
         </ul>
       </div>
@@ -72,12 +70,23 @@
       <div class="filters">
         <form>
           <div class="filter-criteria">
-            <span>Maquillaje</span>
+            <span>ESTADO</span>
             <label>
               <input type="checkbox" name="condition" value="new">NUEVOS</label>
+          </div>
+          <div class="filter-criteria">
+            <span>PRECIO</span>
             <label>
-              <input type="checkbox" name="price" value="23990">23990</label>
+              <input type="checkbox" name="price" value="27900">27900</label>
+              <label>
+                <input type="checkbox" name="price" value="15000">15000</label>
+          </div>
+          <div class="filter-criteria">
+            <span>DISPONIBLE</span>
             <label>
+              <input type="checkbox" name="available_quantity" value="3">3</label>
+              <label>
+                <input type="checkbox" name="available_quantity" value="20">20</label>
           </div>
           <a class="waves-effect waves-light btn teal accent-4">Clear filters</a>
         </form>

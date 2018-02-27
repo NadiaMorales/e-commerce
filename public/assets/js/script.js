@@ -1,7 +1,7 @@
 $(document).ready(() => {
-  $(".button-collapse").sideNav();
-// Variables globales
-// Arreglo vacío que contendrá los objetos con información de los productos
+  $('.button-collapse').sideNav();
+  // Variables globales
+  // Arreglo vacío que contendrá los objetos con información de los productos
   let products = [];
   /*
 Objeto vacío que tendrá un array de valores para cada filtro
@@ -81,12 +81,18 @@ filters = {
   const haircare = 'MLC1263';
   const bodycare = 'MLC1260';
   const makeup = 'MLC1248';
+  let num = 0;
+  let category = 'MLC1248';
+  $('#MLC1253').click(function() {
+    num = 1253;
+  });
+  if (num === 1253){
+    category =  'MLC1253'
+  }
+  console.log(category);
 
-  const category =  '';
 
-
-
-  $.getJSON(`https://api.mercadolibre.com/sites/MLC/search?category=MLC1248&official_store_id=all`, function(data) {
+  $.getJSON(`https://api.mercadolibre.com/sites/MLC/search?category=${category}&official_store_id=all`, function(data) {
     // Write the data into our global variable.
     products = data.results;
     console.log(products);
@@ -251,7 +257,7 @@ filters = {
   // products - an object with the full products list (from product.json).
   function renderFilterResults(filters, products) {
     // This array contains all the possible filter criteria.
-    var criteria = ['condition', 'price'],
+    var criteria = ['condition', 'price', 'available_quantity'],
       results = [],
       isFiltered = false;
 
@@ -281,6 +287,12 @@ filters = {
           products.forEach(function(item) {
             // If the product has the same specification value as the one in the filter
             // push it inside the results array and mark the isFiltered flag true.
+            if (typeof item.available_quantity === 'number') {
+              if (item.available_quantity == filter) {
+                results.push(item);
+                isFiltered = true;
+              }
+            }
 
             if (typeof item.price === 'number') {
               if (item.price == filter) {
