@@ -3,16 +3,22 @@
 	padding:0;
 }
 
-body{
-	font: normal 16px Arial, Helvetica, sans-serif;
-}
+ html {
+    font-family: 'Open Sans', sans-serif;
+  }
+    
 
 h1, h3{
-	font: normal 24px 'Open Sans', Arial, Helvetica, sans-serif;
+	font: normal 24px 'Open Sans', sans-serif;
+	font-weight: 800;
+}
+.nav-wrapper span{
+	font-size: 46px;
+	font-family: 'Shrikhand', cursive;
 }
 
+
 .brand-logo small{
-	
 	font-size: .4em;
 }
 
