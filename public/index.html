@@ -1,90 +1,131 @@
 <!DOCTYPE html>
 <html>
-<head lang="en">
+
+<head lang="es">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Single Page App Without A Framework</title>
-  <link href="http://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+ <link rel="stylesheet" href="assets/css/materialize.css">
   <link href="assets/css/styles.css" rel="stylesheet">
 </head>
+
 <body class=" grey lighten-5">
-<div class="navbar-fixed">
-  
-  <nav class="nav-extended white teal-text  text-accent-4 ">
+  <div class="navbar-fixed">
+    <nav class="nav-extended white teal-text  text-accent-4">
       <div class="nav-wrapper teal-text  text-accent-4 ">
-       <a href="#!" class="brand-logo teal-text  text-accent-4"><i class="fab fa-studiovinari fa-2x teal-text  text-accent-3"></i>Helado <small class="teal-text text-darken-4">An e-commerce Proyect</small></a>
-        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons teal-text  text-accent-4">menu</i></a>
+        <a href="#!" class="brand-logo teal-text  text-accent-4">
+          <i class="fab fa-studiovinari fa-2x teal-text  text-accent-3"></i><span>fée</span>
+          <small class="teal-text text-darken-4">An e-commerce Proyect</small>
+        </a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse">
+          <i class="material-icons teal-text  text-accent-4">menu</i>
+        </a>
         <ul id="nav-mobile" class="right hide-on-med-and-down teal-text  text-accent-4">
-          <li><a href="#" class="teal-text  text-accent-4" >Categorias</a></li>
-          <li><a href="#" class="teal-text  text-accent-4" >Login whit Facebook</a></li>
+          <li>
+            <a class="waves-effect waves-light btn teal accent-4 producto">
+              <i class="material-icons right">add_shopping_cart</i>Carrito de compras</a>
+          </li>
         </ul>
         <ul class="side-nav teal-text  text-accent-4" id="mobile-demo">
-          <li ><a href="#" class="teal-text  text-accent-4">Sass</a></li>
-          <li><a href="#">Components</a></li>
-          <li><a href="#" class="teal-text  text-accent-4">JavaScript</a></li>
+          <li>
+            <a href="#" class="teal-text  text-accent-4">Sass</a>
+          </li>
+          <li>
+            <a href="#">Components</a>
+          </li>
+          <li>
+            <a href="#" class="teal-text  text-accent-4">JavaScript</a>
+          </li>
         </ul>
       </div>
       <div class="nav-content teal-text  text-accent-4">
-      <br>
+        <br>
         <ul class="tabs tabs-transparent">
-          <li><a  class="teal-text  text-accent-4" href="#test1" idMercado="MLC1253",">Cuidado de la Piel</a></li>
-          <li><a class="teal-text  text-accent-4 active" href="#test2" idMercado="MLC1263">Cuidado del Cabello</a></li>
-          <li class="disabled"><a  class="teal-text text-accent-4" href="#test3" idMercado="MLC1260">Cuidado del Cuerpo</a></li>
-          <li><a class="teal-text  text-accent-4" href="#test4" idMercado="MLC1248">Maquillaje</a></li>
+          <li>
+            <a class="teal-text  text-accent-4" href="#Cuidado-de-la-Piel" id="MLC1253">Cuidado de la Piel</a>
+          </li>
+          <li>
+            <a class="teal-text  text-accent-4 active" href="#Cuidado-del-Cabello" id="MLC1263">Cuidado del Cabello</a>
+          </li>
+          <li class="disabled">
+            <a class="teal-text text-accent-4" href="#Cuidado-del-Cuerpo" id="MLC1260">Cuidado del Cuerpo</a>
+          </li>
+          <li>
+            <a class="teal-text  text-accent-4" href="#Maquillaje" id="MLC1248">Maquillaje</a>
+          </li>
         </ul>
       </div>
-  </nav>
-</div>
-<!--   <div id="test1" class="col s12">Test 1</div>
-  <div id="test2" class="col s12">Test 2</div>
-  <div id="test3" class="col s12">Test 3</div>
-  <div id="test4" class="col s12">Test 4</div> -->
+    </nav>
+  </div>
+    <div id="Cuidado-de-la-Piel" class="col s12"></div>
+  <div id="Cuidado-del-Cabello" class="col s12"></div>
+  <div id="Cuidado-del-Cuerpo" class="col s12"></div>
+  <div id="Maquillaje" class="col s12"></div>
 
   <div class="main-content">
     <div class="all-products page">
       <div class="filters">
         <form>
           <div class="filter-criteria">
-            <span>Manufacturer</span>
-            <label><input type="checkbox" name="manufacturer" value="apple">Apple</label>
-            <label><input type="checkbox" name="manufacturer" value="samsung">Samsung</label>
-            <label><input type="checkbox" name="manufacturer" value="htc">HTC</label>
-            <label><input type="checkbox" name="manufacturer" value="nokia">Nokia</label>
-            <label><input type="checkbox" name="manufacturer" value="zte">ZTE</label>
-            <label><input type="checkbox" name="manufacturer" value="sony">Sony</label>
+            <span>ESTADO</span>
+            <label>
+              <input type="checkbox" name="condition" value="new">NUEVOS</label>
           </div>
-
           <div class="filter-criteria">
-            <span>Screen Size</span>
-            <label><input type="checkbox" value="16" name="storage">16 GB</label>
-            <label><input type="checkbox" value="32" name="storage">32 GB</label>
+            <span>PRECIO</span>
+            <label>
+              <input type="checkbox" name="price" value="27990">27990</label>
+              <label>
+                <input type="checkbox" name="price" value="15000">15000</label>
           </div>
-
           <div class="filter-criteria">
-            <span>OS</span>
-            <label><input type="checkbox" value="android" name="os">Android</label>
-            <label><input type="checkbox" value="ios" name="os">iOS</label>
-            <label><input type="checkbox" value="windows" name="os">Windows</label>
+            <span>DISPONIBLE</span>
+            <label>
+              <input type="checkbox" name="available_quantity" value="3">3</label>
+              <label>
+                <input type="checkbox" name="available_quantity" value="20">20</label>
           </div>
-
-          <div class="filter-criteria">
-            <span>Camera</span>
-            <label><input type="checkbox" value="5" name="camera">5 Mpx</label>
-            <label><input type="checkbox" value="8" name="camera">8 Mpx</label>
-            <label><input type="checkbox" value="12" name="camera">12 Mpx</label>
-            <label><input type="checkbox" value="15" name="camera">15 Mpx</label>
-          </div>
-
-          <button>Clear filters</button>
+          <a class="waves-effect waves-light btn teal accent-4">Clear filters</a>
         </form>
       </div>
+      <!-- <div class="section">
+        <div class="container">
+          <div class="row ">
+            <div class="products-list">
+            <script id="products-template" type="x-handlebars-template">​
+               {{#each this}}
+
+              <div class="col s3">
+              <div class="card">
+              <div class="card-image waves-effect waves-block waves-light">
+              <img class="activator product-photo" src="{{thumbnail}}" alt="{{name}}">
+              </div>
+              <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4"><span>Lugar:</span>{{address.state_name}}Card Title<i class="material-icons right">more_vert</i></span>
+              <p><a href="#">This is a link</a></p>
+              </div>
+              <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">{{title}}<i class="material-icons right">close</i></span>
+              <p>Here is some more information about this product that is only revealed once clicked on.</p>
+              </div>
+              </div>
+              </div>
+              {{/each}}
+            </script>
+
+            </div>
+          </div>
+        </div>
+      </div>
+ -->
       <ul class="products-list">
         <script id="products-template" type="x-handlebars-template">​
           {{#each this}}
-          <li data-index="{{id}}">
+          <li data-index="{{id}}" class="eliminar">
             <a href="#" class="product-photo"><img src="{{thumbnail}}" height="130" alt="{{name}}"/></a>
             <h2><a href="#"> {{name}} </a></h2>
             <ul class="product-description">
@@ -98,61 +139,67 @@
             <div class="highlight"></div>
           </li>
           {{/each}}
-        </script> 
+        </script>
       </ul>
-
     </div>
     <div class="single-product page">
-  <!--     <div class="overlay"></div> -->
+   <div class="overlay"></div>
       <div class="preview-large">
         <h3>Single product view</h3>
-        <img src=""  />
+        <img src="" />
         <ul>
-        <li><strong>Estado:</strong> <span id="li1"></span></li>
-        <li>Disponibles: <span id="li2"></span></li>
-        <li>Lugar: <span id="li3"></span></li>
-        <li id="li4"> $</li>
+          <li>
+            <strong>Estado:</strong>
+            <span id="li1"></span>
+          </li>
+          <li>Disponibles:
+            <span id="li2"></span>
+          </li>
+          <li>Lugar:
+            <span id="li3"></span>
+          </li>
+          <li id="li4"> $</li>
         </ul>
-        <a class="waves-effect waves-light btn teal accent-4 producto"><i class="material-icons right">add_shopping_cart</i>Añadir</a>
+        <a class="waves-effect waves-light btn teal accent-4 producto">
+          <i class="material-icons right">add_shopping_cart</i>Añadir</a>
         <span class="close">×</span>
       </div>
     </div>
     <div class="error page">
-      <h3>Sorry, something went wrong</h3>
+    <br>
+      <h3>Estamos trabajando para mejorar la calidad de nuestro servicio.</h3>
     </div>
   </div>
-
-  
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js"></script>
-<!--   <script src="https://secure.mlstatic.com/sdk/javascript/v1/mercadopago.js"></script> -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-<script src="assets/js/minicart.js"></script>
-<script>
-      // configuración inicial del carrito 
+  <!--   <script src="https://secure.mlstatic.com/sdk/javascript/v1/mercadopago.js"></script> -->
+  <script src="assets/js/materialize.js"></script>
+  <script src="assets/js/minicart.js"></script>
+  <script>
+    // configuración inicial del carrito
     paypal.minicart.render({
-    strings:{
-      button:'Pagar'
-     ,buttonAlt: "Total"
-     ,subtotal: 'Total:'
-     ,empty: 'No hay productos en el carrito'
-    }
+      strings: {
+        button: 'Pagar'
+        , buttonAlt: "Total"
+        , subtotal: 'Total:'
+        , empty: 'No hay productos en el carrito'
+      }
     });
     // Eventos para agregar productos al carrito
-$('.producto').click(function(e){
-     e.stopPropagation();
-   paypal.minicart.cart.add({
-  business: 'visidevi-facilitator@gmail.com ', // Cuenta paypal para recibir el dinero
-  item_name: $(this).attr("titulo"),
-  amount: $(this).attr("precio"),
-   currency_code: 'CLP',
-// "business": "visidevi@gmail.com", "item_name": $(this).attr("titulo"), "amount": $(this).attr("precio"), "currency_code": "USD"
- });
- });
+    $('.producto').click(function (e) {
+      e.stopPropagation();
+      paypal.minicart.cart.add({
+        business: 'visidevi-facilitator@gmail.com ', // Cuenta paypal para recibir el dinero
+        item_name: $(this).attr("titulo"),
+        amount: $(this).attr("precio"),
+        currency_code: 'CLP',
+        // "business": "visidevi@gmail.com", "item_name": $(this).attr("titulo"), "amount": $(this).attr("precio"), "currency_code": "USD"
+      });
+    });
 
-</script>
+  </script>
   <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-  <script src="assets/js/app.js"></script>
   <script src="assets/js/script.js"></script>
 </body>
+
 </html>
