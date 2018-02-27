@@ -77,21 +77,28 @@ filters = {
 
   // https://api.mercadolibre.com/categories/MLC1246
 
-  const skincare = 'MLC1253';
-  const haircare = 'MLC1263';
-  const bodycare = 'MLC1260';
-  const makeup = 'MLC1248';
-  let num = 0;
-  let category = 'MLC1248';
-  $('#MLC1253').click(function() {
-    num = 1253;
-  });
-  if (num === 1253){
-    category =  'MLC1253'
-  }
-  console.log(category);
 
+newProduct('MLC1248');
+ 
+  $('body').on('click', '#MLC1253', function(){
+    // alert($(this).attr('id'))
+    newProduct($(this).attr('id'))
 
+  })
+
+  $('body').on('click', '#MLC1263', function(){
+    newProduct($(this).attr('id'))
+  })  
+
+  $('body').on('click', '#MLC1260', function(){
+    newProduct($(this).attr('id'))
+  })
+    $('body').on('click', '#MLC1248', function(){
+    newProduct($(this).attr('id'))
+  })
+
+function newProduct(category){
+ $('.products-list li').addClass('hide');
   $.getJSON(`https://api.mercadolibre.com/sites/MLC/search?category=${category}&official_store_id=all`, function(data) {
     // Write the data into our global variable.
     products = data.results;
@@ -110,8 +117,7 @@ filters = {
   $(window).on('hashchange', function() {
     render(decodeURI(window.location.hash));
   });
-
-
+}
   // Navigation
 
   function render(url) {
@@ -257,7 +263,7 @@ filters = {
   // products - an object with the full products list (from product.json).
   function renderFilterResults(filters, products) {
     // This array contains all the possible filter criteria.
-    var criteria = ['condition', 'price', 'available_quantity'],
+    var criteria = ['condition', 'price','available_quantity'],
       results = [],
       isFiltered = false;
 
@@ -311,8 +317,8 @@ filters = {
 
           // Here we can make the checkboxes representing the filters true,
           // keeping the app up to date.
-          if (elm && filter) {
-            $('input[name=' + elm + '][value=' + filter + ']').prop('checked', true);
+          if ( filter) {
+            $('input[value=' + filter + ']').prop('checked', true);
           }
         });
       }

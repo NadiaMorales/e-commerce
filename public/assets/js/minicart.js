@@ -7,8 +7,7 @@
  * @url http://www.minicartjs.com/
  * @license MIT <https://github.com/jeffharrell/minicart/raw/master/LICENSE.md>
  */
-
-;const newLocal = 'https://www.sandbox.paypal.com/cgi-bin/webscr';
+const newLocal = "https://www.sandbox.paypal.com/cgi-bin/webscr"; 
 (function e(t, n, r) {
 function s(o, u) {
 if (!n[o]) {
@@ -1924,6 +1923,8 @@ client: true }
     parent: (typeof document !== 'undefined') ? document.body : null,
 
     action: newLocal,
+
+    method:'post',
 
     target: '',
 
